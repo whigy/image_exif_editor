@@ -16,4 +16,8 @@ Check more about EXIF Tags here: https://exiftool.org/TagNames/EXIF.html
     ```
     pip install pillow piexif pyyaml
     ```
-- Fill in `config.yaml` file
+- Fill in `config.yaml` file according to instruction
+- Run:
+    ```
+    python main.py
+    ```
