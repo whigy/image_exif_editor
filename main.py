@@ -82,7 +82,6 @@ def main():
     # TODO: Add a break point for confirmation to continue
 
     for i, filename in enumerate(os.listdir(input_folder)):
-    # Check if the file is a .docx file
         if filename.endswith('.JPG'):
             # Create the full file path
             image_path = os.path.join(input_folder, filename)

@@ -1,6 +1,6 @@
 # Image EXIF meta data editor
 
-A small script to adjust Image EXIF metadata tags from a single folder.
+A small script to adjust Image (currently JPG only) EXIF metadata tags from a single folder.
 Supports to adjust:
 - `0x882a` - TimeZoneOffset
 - `0x9003` - DateTimeOriginal
