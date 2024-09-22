@@ -1,0 +1,10 @@
+images:
+  input_folder: test_data  # input folder
+  output_folder: output  # [Optional] output folder. Will overwrite the photos if not set
+
+adjust:
+  shift_time:  # [Optional] set how much time to shift. If None, then time will not be shifted
+    hours: 5
+    minutes: 0
+    seconds: 90
+  timezone_offset: 8 # [Optional] The time zone offset of DateTimeOriginal from GMT in hours. If None, then will not update time zone
