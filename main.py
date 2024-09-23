@@ -82,7 +82,7 @@ def main():
     r = input("Correct? Continue? (Y/N)\n")
     if r.lower() in ("y", "yes"):
         logging.info("Start processing the images")
-    elif r.lower() in ("n", "No"):
+    elif r.lower() in ("n", "no"):
         logging.info("Abort processing the images")
         return
     else:
