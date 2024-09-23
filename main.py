@@ -79,14 +79,24 @@ def main():
     else:
         logging.info(f"...Will set all images' timezone to: GMT {timezone_offset}")
 
-    # TODO: Add a break point for confirmation to continue
+    r = input("Correct? Continue? (Y/N)\n")
+    if r.lower() in ("y", "yes"):
+        logging.info("Start processing the images")
+    elif r.lower() in ("n", "No"):
+        logging.info("Abort processing the images")
+        return
+    else:
+        logging.info(f"Invalid response {r}. Abort processing the images")
+        return
 
     for i, filename in enumerate(os.listdir(input_folder)):
-        if filename.endswith('.JPG'):
+        if filename.lower().endswith('.jpg') or filename.lower().endswith('.jpeg'):
             # Create the full file path
             image_path = os.path.join(input_folder, filename)
             if output_folder is not None:
                 output_path = os.path.join(output_folder, filename)
+            else:
+                output_path = None
             update_image_meta(image_path, output_path, time_delta, timezone_offset)
 
     logging.info(f"Done! {i} images modified!")
